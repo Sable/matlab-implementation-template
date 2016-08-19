@@ -3,7 +3,6 @@
     "short-name":"matlab",
     "description":"Template for matlab implementations",
     "language":"matlab",
-    "benchmark": "https://github.com/Sable/benchmark-template.git",
     "core-source-files": [
        { "file": "./kernel.m"}
     ],
