@@ -1,4 +1,4 @@
-function [checksum] = verify(parameter, output)
+function [checksum] = verify(input_size, output)
     % Compute checksum from output
     uint64_output = typecast(output, 'uint64');
     [row,col] = size(uint64_output);
@@ -11,11 +11,11 @@ function [checksum] = verify(parameter, output)
     end
 
     % Raise an error if the checksum does not correspond to the expected mathematical output's checksum for known inputs
-    if parameter == 10 && checksum ~= 4012692613
+    if input_size == 10 && checksum ~= 4012692613
         error(strcat('Invalid checksum of ''', int2str(checksum), ''' for parameter of ''', int2str(parameter), ''' expected a checksum of ''4012692613'' instead'))
-    elseif parameter == 3000 && checksum ~= 1705208958
+    elseif input_size == 3000 && checksum ~= 1705208958
         error(strcat('Invalid checksum of ''', int2str(checksum), ''' for parameter of ''', int2str(parameter), ''' expected a checksum of ''1705208958'' instead'))
-    elseif parameter == 7000 && checksum ~= 2383274062
+    elseif input_size == 7000 && checksum ~= 2383274062
         error(strcat('Invalid checksum of ''', int2str(checksum), ''' for parameter of ''', int2str(parameter), ''' expected a checksum of ''2383274062'' instead'))
     end
 end
