@@ -2,7 +2,7 @@ function runner(input_size)
 
 % Create or load input data
 % Use the default twister matlab pseudo-random number generator
-input = rand(1, input_size);
+input = ostrich_rand(1, input_size);
 
 % Run kernel and measure time for core computation 
 tic;
