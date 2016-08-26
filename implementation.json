@@ -15,6 +15,7 @@
     ],
     "compatibilities": [
         "https://github.com/Sable/ostrich-matlab-concatenate-compiler.git",
-        "https://github.com/Sable/ostrich-matlab-environment.git"
+        "https://github.com/Sable/ostrich-matlab-environment.git",
+        "https://github.com/Sable/ostrich-octave-environment.git"
     ]
 }
